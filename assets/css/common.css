@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@import url('reset.css');
+
+/* 헤더영역 */
+.main-header{
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    height: 85px;
+    padding: 27px 0;
+    box-sizing: border-box;
+}
+.main-header .header-inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.main-header h1{
+    float: left;
+    margin-right: 100px;
+}
+.main-header h1 img{
+    width: 200px;
+}
+.main-header nav{
+    float: left;
+}
+.main-header nav ul li{
+    position: relative;
+    display: inline-block;
+}
+/*.main-header nav ul li:before{*/
+/*    content:'--';*/
+/*}*/
+/*.main-header nav ul li:after{*/
+/*    content: '++';*/
+/*}*/
+.main-header nav ul li:after{
+    content: '';
+    display: block;
+    width: calc(100% - 24px);  height: 1px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.main-header nav ul li:hover:after{
+    content: '';
+    display: block;
+    border-bottom: 1px solid #333;
+    width: calc(100% - 24px);
+    height: 1px;
+    position: absolute;
+    left: 50%; bottom: 0;
+    opacity: 1;
+    transform: translateX(-50%);
+    transition: opacity 0.5s;
+}
+.main-header nav ul li a{
+    display: block;
+    padding: 7px 12px;
+    font-size: 18px;
+}
+.main-header .util-con{
+    float: right;
+}
+.main-header .util-con li{
+    display: inline-block;
+}
+.main-header .util-con li a{
+    display: block;
+    padding: 7px 12px;
+    font-size: 18px;
+}
